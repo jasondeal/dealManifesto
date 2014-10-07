@@ -1,0 +1,838 @@
+
+dealWeather.updateWeatherFromWU(
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "geolookup": 1
+  ,
+  "conditions": 1
+  ,
+  "forecast": 1
+  }
+	}
+		,	"location": {
+		"type":"CITY",
+		"country":"US",
+		"country_iso3166":"US",
+		"country_name":"USA",
+		"state":"CA",
+		"city":"Los Angeles",
+		"tz_short":"PDT",
+		"tz_long":"America/Los_Angeles",
+		"lat":"33.97457886",
+		"lon":"-118.24745941",
+		"zip":"90001",
+		"magic":"1",
+		"wmo":"99999",
+		"l":"/q/zmw:90001.1.99999",
+		"requesturl":"US/CA/Los_Angeles.html",
+		"wuiurl":"http://www.wunderground.com/US/CA/Los_Angeles.html",
+		"nearby_weather_stations": {
+		"airport": {
+		"station": [
+		{ "city":"Los Angeles Downtown", "state":"CA", "country":"US", "icao":"KCQT", "lat":"34.02354050", "lon":"-118.29120636" }
+		,{ "city":"Hawthorne", "state":"CA", "country":"US", "icao":"KHHR", "lat":"33.92284012", "lon":"-118.33518982" }
+		,{ "city":"Los Angeles", "state":"CA", "country":"US", "icao":"KLAX", "lat":"33.93815994", "lon":"-118.38652802" }
+		,{ "city":"Santa Monica", "state":"CA", "country":"US", "icao":"KSMO", "lat":"34.02099991", "lon":"-118.44708252" }
+		]
+		}
+		,
+		"pws": {
+		"station": [
+		{
+		"neighborhood":"View Park-Windsor Hills",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN61",
+		"lat":33.995155,
+		"lon":-118.347275,
+		"distance_km":9,
+		"distance_mi":5
+		},
+		{
+		"neighborhood":"Downtown Los Angeles",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN8",
+		"lat":34.059711,
+		"lon":-118.256401,
+		"distance_km":9,
+		"distance_mi":5
+		},
+		{
+		"neighborhood":"Civic Center",
+		"city":"Inglewood",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAINGLE3",
+		"lat":33.962559,
+		"lon":-118.355423,
+		"distance_km":10,
+		"distance_mi":6
+		},
+		{
+		"neighborhood":"Downey 90240",
+		"city":"Downey",
+		"state":"CA",
+		"country":"US",
+		"id":"KCADOWNE4",
+		"lat":33.957977,
+		"lon":-118.130501,
+		"distance_km":10,
+		"distance_mi":6
+		},
+		{
+		"neighborhood":"Montebello, West side near Golf Course.",
+		"city":"Montebello",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAMONTE7",
+		"lat":34.025940,
+		"lon":-118.132042,
+		"distance_km":12,
+		"distance_mi":7
+		},
+		{
+		"neighborhood":"Blair Hills",
+		"city":"Culver City",
+		"state":"CA",
+		"country":"US",
+		"id":"KCACULVE3",
+		"lat":34.016998,
+		"lon":-118.375999,
+		"distance_km":12,
+		"distance_mi":7
+		},
+		{
+		"neighborhood":"Westchester",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN68",
+		"lat":33.963791,
+		"lon":-118.391670,
+		"distance_km":13,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"CBS Radio, Venice and Fairfax",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KXTCALOS2",
+		"lat":34.040283,
+		"lon":-118.370430,
+		"distance_km":13,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"CBS Radio Miracle Mile",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN62",
+		"lat":34.061668,
+		"lon":-118.352219,
+		"distance_km":13,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"Westchester",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN67",
+		"lat":33.964333,
+		"lon":-118.401039,
+		"distance_km":14,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"MacDumes - Park La Brea",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN51",
+		"lat":34.069405,
+		"lon":-118.351486,
+		"distance_km":14,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"Hillcrest",
+		"city":"Monterey Park",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAMONTE16",
+		"lat":34.045002,
+		"lon":-118.110947,
+		"distance_km":14,
+		"distance_mi":8
+		},
+		{
+		"neighborhood":"Glassell Park",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN73",
+		"lat":34.110092,
+		"lon":-118.230865,
+		"distance_km":15,
+		"distance_mi":9
+		},
+		{
+		"neighborhood":"Elephant Hill",
+		"city":"South Pasadena",
+		"state":"CA",
+		"country":"US",
+		"id":"KCASOUTH13",
+		"lat":34.098888,
+		"lon":-118.173332,
+		"distance_km":15,
+		"distance_mi":9
+		},
+		{
+		"neighborhood":"Bixby Knolls",
+		"city":"Long Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALONGB31",
+		"lat":33.840382,
+		"lon":-118.186440,
+		"distance_km":15,
+		"distance_mi":9
+		},
+		{
+		"neighborhood":"El Segundo",
+		"city":"El Segundo",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAELSEG4",
+		"lat":33.927475,
+		"lon":-118.412148,
+		"distance_km":16,
+		"distance_mi":9
+		},
+		{
+		"neighborhood":"American Honda Motor Co., Inc.",
+		"city":"Torrance",
+		"state":"CA",
+		"country":"US",
+		"id":"KCATORRA7",
+		"lat":33.837940,
+		"lon":-118.314178,
+		"distance_km":16,
+		"distance_mi":9
+		},
+		{
+		"neighborhood":"Sally\u0027s house in",
+		"city":"Manhattan Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN10",
+		"lat":33.894569,
+		"lon":-118.400429,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"MB Trees",
+		"city":"Manhattan Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAMANHA5",
+		"lat":33.897324,
+		"lon":-118.403084,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Alhambra, CA",
+		"city":"Alhambra",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAALHAM3",
+		"lat":34.074055,
+		"lon":-118.110596,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Spaulding Square",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN54",
+		"lat":34.094898,
+		"lon":-118.357803,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Tree Section",
+		"city":"Manhattan Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAMANHA2",
+		"lat":33.893929,
+		"lon":-118.402878,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Bixby Knolls",
+		"city":"Long Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALONGB8",
+		"lat":33.831501,
+		"lon":-118.184700,
+		"distance_km":16,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Paseo Del Rey Elementary",
+		"city":"Playa Del Rey",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAPLAYA2",
+		"lat":33.957462,
+		"lon":-118.433456,
+		"distance_km":17,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Scattergood Generating Station Unit 3 Repowering",
+		"city":"El Segundo",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAELSEG5",
+		"lat":33.918064,
+		"lon":-118.423096,
+		"distance_km":17,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"West Hollywood",
+		"city":"West Hollywood",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAWESTH12",
+		"lat":34.086151,
+		"lon":-118.380478,
+		"distance_km":17,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Civic Center area",
+		"city":"Torrance",
+		"state":"CA",
+		"country":"US",
+		"id":"KCATORRA20",
+		"lat":33.834522,
+		"lon":-118.339561,
+		"distance_km":17,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Venice",
+		"city":"Los Angeles",
+		"state":"CA",
+		"country":"US",
+		"id":"KCALOSAN46",
+		"lat":33.993176,
+		"lon":-118.438835,
+		"distance_km":17,
+		"distance_mi":10
+		},
+		{
+		"neighborhood":"Master Shake\u0027s Place",
+		"city":"Hermosa Beach",
+		"state":"CA",
+		"country":"US",
+		"id":"KCAHERMO3",
+		"lat":33.862209,
+		"lon":-118.385979,
+		"distance_km":17,
+		"distance_mi":10
+		}
+		]
+		}
+		}
+	}
+  ,	"current_observation": {
+		"image": {
+		"url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"display_location": {
+		"full":"Los Angeles, CA",
+		"city":"Los Angeles",
+		"state":"CA",
+		"state_name":"California",
+		"country":"US",
+		"country_iso3166":"US",
+		"zip":"90001",
+		"magic":"1",
+		"wmo":"99999",
+		"latitude":"33.97457886",
+		"longitude":"-118.24745941",
+		"elevation":"50.00000000"
+		},
+		"observation_location": {
+		"full":"View Park-Windsor Hills, Los Angeles, California",
+		"city":"View Park-Windsor Hills, Los Angeles",
+		"state":"California",
+		"country":"US",
+		"country_iso3166":"US",
+		"latitude":"33.995155",
+		"longitude":"-118.347275",
+		"elevation":"328 ft"
+		},
+		"estimated": {
+		},
+		"station_id":"KCALOSAN61",
+		"observation_time":"Last Updated on September 15, 3:14 PM PDT",
+		"observation_time_rfc822":"Mon, 15 Sep 2014 15:14:56 -0700",
+		"observation_epoch":"1410819296",
+		"local_time_rfc822":"Mon, 15 Sep 2014 15:18:40 -0700",
+		"local_epoch":"1410819520",
+		"local_tz_short":"PDT",
+		"local_tz_long":"America/Los_Angeles",
+		"local_tz_offset":"-0700",
+		"weather":"Clear",
+		"temperature_string":"86.9 F (30.5 C)",
+		"temp_f":86.9,
+		"temp_c":30.5,
+		"relative_humidity":"46%",
+		"wind_string":"Calm",
+		"wind_dir":"West",
+		"wind_degrees":267,
+		"wind_mph":0.0,
+		"wind_gust_mph":"9.0",
+		"wind_kph":0,
+		"wind_gust_kph":"14.5",
+		"pressure_mb":"1007",
+		"pressure_in":"29.73",
+		"pressure_trend":"-",
+		"dewpoint_string":"64 F (18 C)",
+		"dewpoint_f":64,
+		"dewpoint_c":18,
+		"heat_index_string":"88 F (31 C)",
+		"heat_index_f":88,
+		"heat_index_c":31,
+		"windchill_string":"NA",
+		"windchill_f":"NA",
+		"windchill_c":"NA",
+		"feelslike_string":"88 F (31 C)",
+		"feelslike_f":"88",
+		"feelslike_c":"31",
+		"visibility_mi":"10.0",
+		"visibility_km":"16.1",
+		"solarradiation":"--",
+		"UV":"7","precip_1hr_string":"0.00 in ( 0 mm)",
+		"precip_1hr_in":"0.00",
+		"precip_1hr_metric":" 0",
+		"precip_today_string":"0.00 in (0 mm)",
+		"precip_today_in":"0.00",
+		"precip_today_metric":"0",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"forecast_url":"http://www.wunderground.com/US/CA/Los_Angeles.html",
+		"history_url":"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KCALOSAN61",
+		"ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=33.995155,-118.347275",
+		"nowcast":""
+	}
+		,
+	"forecast":{
+		"txt_forecast": {
+		"date":"2:09 PM PDT",
+		"forecastday": [
+		{
+		"period":0,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Monday",
+		"fcttext":"Abundant sunshine. High 89F. Winds W at 10 to 15 mph.",
+		"fcttext_metric":"Abundant sunshine. High 32C. Winds W at 15 to 25 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":1,
+		"icon":"nt_clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_clear.gif",
+		"title":"Monday Night",
+		"fcttext":"Clear skies. Low 74F. Winds SE at 5 to 10 mph.",
+		"fcttext_metric":"Clear skies. Low 23C. Winds SE at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":2,
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"title":"Tuesday",
+		"fcttext":"A mainly sunny sky. High 91F. Winds WNW at 10 to 15 mph.",
+		"fcttext_metric":"A mainly sunny sky. High 33C. Winds WNW at 15 to 25 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":3,
+		"icon":"nt_partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"title":"Tuesday Night",
+		"fcttext":"Clear evening skies will give way to mostly cloudy skies overnight. Low near 75F. Winds S at 5 to 10 mph.",
+		"fcttext_metric":"Clear early then increasing cloudiness overnight. Low 24C. Winds S at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":4,
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"title":"Wednesday",
+		"fcttext":"Some clouds in the morning will give way to mainly sunny skies for the afternoon. High 88F. Winds WSW at 10 to 20 mph.",
+		"fcttext_metric":"Partly cloudy skies. High 32C. Winds WSW at 15 to 30 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":5,
+		"icon":"nt_partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"title":"Wednesday Night",
+		"fcttext":"Clear early then increasing cloudiness overnight. Low near 70F. Winds SW at 5 to 10 mph.",
+		"fcttext_metric":"Clear during the evening followed by mostly cloudy skies overnight. Low 21C. Winds SW at 10 to 15 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":6,
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"title":"Thursday",
+		"fcttext":"Some clouds in the morning will give way to mainly sunny skies for the afternoon. High around 80F. Winds SW at 10 to 20 mph.",
+		"fcttext_metric":"Some clouds in the morning will give way to mainly sunny skies for the afternoon. High 27C. Winds SW at 15 to 25 km/h.",
+		"pop":"0"
+		}
+		,
+		{
+		"period":7,
+		"icon":"nt_partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/nt_partlycloudy.gif",
+		"title":"Thursday Night",
+		"fcttext":"Clear skies early then becoming mostly cloudy later at night. Low 66F. SW winds shifting to ESE at 10 to 15 mph.",
+		"fcttext_metric":"Clear skies early then becoming mostly cloudy later at night. Low 19C. SW winds shifting to ESE at 15 to 25 km/h.",
+		"pop":"10"
+		}
+		]
+		},
+		"simpleforecast": {
+		"forecastday": [
+		{"date":{
+	"epoch":"1410832800",
+	"pretty":"7:00 PM PDT on September 15, 2014",
+	"day":15,
+	"month":9,
+	"year":2014,
+	"yday":257,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"September",
+	"monthname_short":"Sep",
+	"weekday_short":"Mon",
+	"weekday":"Monday",
+	"ampm":"PM",
+	"tz_short":"PDT",
+	"tz_long":"America/Los_Angeles"
+},
+		"period":1,
+		"high": {
+		"fahrenheit":"90",
+		"celsius":"32"
+		},
+		"low": {
+		"fahrenheit":"74",
+		"celsius":"23"
+		},
+		"conditions":"Clear",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 15,
+		"kph": 24,
+		"dir": "W",
+		"degrees": 260
+		},
+		"avewind": {
+		"mph": 10,
+		"kph": 16,
+		"dir": "W",
+		"degrees": 260
+		},
+		"avehumidity": 42,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1410919200",
+	"pretty":"7:00 PM PDT on September 16, 2014",
+	"day":16,
+	"month":9,
+	"year":2014,
+	"yday":258,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"September",
+	"monthname_short":"Sep",
+	"weekday_short":"Tue",
+	"weekday":"Tuesday",
+	"ampm":"PM",
+	"tz_short":"PDT",
+	"tz_long":"America/Los_Angeles"
+},
+		"period":2,
+		"high": {
+		"fahrenheit":"91",
+		"celsius":"33"
+		},
+		"low": {
+		"fahrenheit":"75",
+		"celsius":"24"
+		},
+		"conditions":"Clear",
+		"icon":"clear",
+		"icon_url":"http://icons.wxug.com/i/c/k/clear.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 15,
+		"kph": 24,
+		"dir": "WNW",
+		"degrees": 287
+		},
+		"avewind": {
+		"mph": 11,
+		"kph": 18,
+		"dir": "WNW",
+		"degrees": 287
+		},
+		"avehumidity": 45,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1411005600",
+	"pretty":"7:00 PM PDT on September 17, 2014",
+	"day":17,
+	"month":9,
+	"year":2014,
+	"yday":259,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"September",
+	"monthname_short":"Sep",
+	"weekday_short":"Wed",
+	"weekday":"Wednesday",
+	"ampm":"PM",
+	"tz_short":"PDT",
+	"tz_long":"America/Los_Angeles"
+},
+		"period":3,
+		"high": {
+		"fahrenheit":"88",
+		"celsius":"31"
+		},
+		"low": {
+		"fahrenheit":"70",
+		"celsius":"21"
+		},
+		"conditions":"Partly Cloudy",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 20,
+		"kph": 32,
+		"dir": "WSW",
+		"degrees": 244
+		},
+		"avewind": {
+		"mph": 13,
+		"kph": 21,
+		"dir": "WSW",
+		"degrees": 244
+		},
+		"avehumidity": 51,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		,
+		{"date":{
+	"epoch":"1411092000",
+	"pretty":"7:00 PM PDT on September 18, 2014",
+	"day":18,
+	"month":9,
+	"year":2014,
+	"yday":260,
+	"hour":19,
+	"min":"00",
+	"sec":0,
+	"isdst":"1",
+	"monthname":"September",
+	"monthname_short":"Sep",
+	"weekday_short":"Thu",
+	"weekday":"Thursday",
+	"ampm":"PM",
+	"tz_short":"PDT",
+	"tz_long":"America/Los_Angeles"
+},
+		"period":4,
+		"high": {
+		"fahrenheit":"80",
+		"celsius":"27"
+		},
+		"low": {
+		"fahrenheit":"66",
+		"celsius":"19"
+		},
+		"conditions":"Partly Cloudy",
+		"icon":"partlycloudy",
+		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",
+		"skyicon":"",
+		"pop":0,
+		"qpf_allday": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_day": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"qpf_night": {
+		"in": 0.00,
+		"mm": 0
+		},
+		"snow_allday": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_day": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"snow_night": {
+		"in": 0.0,
+		"cm": 0.0
+		},
+		"maxwind": {
+		"mph": 20,
+		"kph": 32,
+		"dir": "SW",
+		"degrees": 223
+		},
+		"avewind": {
+		"mph": 13,
+		"kph": 21,
+		"dir": "SW",
+		"degrees": 223
+		},
+		"avehumidity": 70,
+		"maxhumidity": 0,
+		"minhumidity": 0
+		}
+		]
+		}
+	}
+}
+);

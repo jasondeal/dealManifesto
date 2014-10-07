@@ -1,0 +1,6 @@
+
+dealWeather.getConfig(
+{
+  "days": 4
+}
+);

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+
+<p>Right now, it's <span id='date'></span>, at <span id='time'></span>. Currently, it is <span id='temp'></span> in <span id='city'></span>, <span id='state'></span>.</p>
+
+<p>On <span id='0day'></span>, expect the following: <span id='0temp'></span></p>
+<p>On <span id='1day'></span>, you'll be pleased to note that it will be: <span id='1temp'></span></p>
+<p>However, on <span id='2day'></span>, it will be: <span id='2temp'></span></p>
+<p>However, on <span id='3day'></span>, it will be: <span id='3temp'></span></p>
+
+
+
+<script src="dealWeather.js"></script>
+<script src="dateTime.js"></script>
+<script>
+dateTime.init();
+dealWeather.init(4);
+</script>
+
+</body>
+</html>
