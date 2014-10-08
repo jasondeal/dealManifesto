@@ -5,13 +5,13 @@
     * @version 0.0.1
     * @namespace
     * @name weather
-    * @description
+    * @description 
     * @todo Make _updateContent take an array, not just a single name value pair DONE
     * @todo Make sure everything in ret has a getter and a setter, so externals can access those DONE KINDA
     * @todo  Make getJsonP take in a callback parameter so the callback can be set at runtime instead of static files (which is used for testing, to save bandwidth) DONE
     * @todo  Make setZip able to reset the location and call a new zip code location, resetting all the location vars. DONE
     * @todo  Remove config, remove dependency on it. DONE
-    * @todo Remove the updateContent calls from updateWeatherFromWU, and make those updateContent calls happen in a separate method
+    * @todo Remove the updateContent calls from updateWeatherFromWU, and make those updateContent calls happen in a separate method NOT DONE. IMPORTANT?
     * @todo Make updateWeatherFromWU inspecific to WU, allowing me to use other data sources 
     * @todo Make a separate function that somehow specifies the data structure of WU data separately, so when this is invoked, you can specify other sources and other structures
     * @todo Make a master content updating thing that does the DOM writes and then calls update content on the data elements (especially so we can write logic around what is said)
@@ -20,6 +20,7 @@
 */
 var dealWeather = function() {
 	var 
+		//The container for all the data. Returned as part of init() for external use of generated data.
 		ret = {
 			sCity : ""
 			, sState : ""
@@ -30,26 +31,37 @@ var dealWeather = function() {
 			, aForecastTexts : []
 			, sDataURL : "http://api.wunderground.com/api/cb6ecd95cb631c51/geolookup/conditions/forecast/q/"
 		}
+		//Returns the current city.
 		, getCity = function() {
 			return ret.sCity;
 		}
+		//Returns the current state (as determined by the geolocation).
 		, getState = function() {
 			return ret.sState;
 		}
+		//Returns the current zip code.
 		, getZip = function() {
 			return ret.sZip;
 		}
+		//Returns the current number of days set for the forecast. 
 		, getDaysForecast = function() {
 			return ret.nDaysForecast;
 		}
+		//Get the current temperature (fahrenheit)
 		, getTemperature = function() {
 			return ret.sTemperature;
 		}
+		//Make a new call to set weather data. Requires a zip code to target. Will update all forecast data and update page.
 		, setWeatherByZip = function(zipCode) {
 			//see todo
 			var urlWithZip = ret.sDataURL + zipCode + ".json";
 			_getJsonP(urlWithZip, "dealWeather.updateWeatherFromWU");
 		}
+		//Set a new base data URL. As of current version, must be Weather Underground.
+		, setDataURL = function(dataURL){
+			ret.sDataURL = dataURL;
+		}
+		//Updates all weather data and calls page updating. Currently tied to Weather Underground.
 		, updateWeatherFromWU = function(weatherData) {
 			var aForecastData = weatherData.forecast.txt_forecast.forecastday
 				, i=0
@@ -95,8 +107,9 @@ var dealWeather = function() {
 			scriptID.src = fullURL;
 			headID.appendChild(scriptID);
 		}
-		, init = function(days) {
+		, init = function(days, altDataURL) {
 			ret.nDaysForecast = days;
+			setDataURL(altDataURL);
 			//test data on local
 			_getJsonP("weatherData", null);
 			//live data
@@ -120,6 +133,7 @@ var dealWeather = function() {
 		updateWeatherFromWU : updateWeatherFromWU
 		, setWeatherByZip : setWeatherByZip
 		, init : init
+		, setDataURL : setDataURL
 	};
 
 }();
